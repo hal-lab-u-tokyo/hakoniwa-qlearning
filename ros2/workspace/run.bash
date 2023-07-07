@@ -7,4 +7,10 @@ then
 	echo "Usage: $0 <pkgname> [args]"
 	exit 1
 fi
-ros2 run ${1} ${1}_node ${2} ${3}
+
+#run ros2_operation
+ros2 run ${1}_op ${1}_op_node ${2} ${3}
+
+#run ros2 learning
+#ros2 run q_table_py qtable_node_py
+#ros2 run ${1} ${1}_node ${2} ${3} 
