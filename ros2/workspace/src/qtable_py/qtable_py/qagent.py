@@ -10,7 +10,7 @@ class Qagent:
         self._alpha = alpha
         self._gamma = gamma
         self._initial_q = initial_q
-        self.score_list = [20., 5., 5., -2., -2.]
+        self.score_list = [20., 5., 5., -5., -5.]
         csv_path = os.getcwd() + "/qmodel.csv"
         
         if not os.path.isfile(csv_path):

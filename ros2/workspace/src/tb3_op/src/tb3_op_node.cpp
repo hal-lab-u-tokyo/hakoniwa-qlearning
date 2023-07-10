@@ -62,25 +62,25 @@ static void go_forward(void) {
 
 static void right_forward(void) {
   cmd_vel.linear.x = 0.2f;
-  cmd_vel.angular.z = -2.0f;
+  cmd_vel.angular.z = -1.0f;
   return;
 }
 
 static void right_rotation(void) {
   cmd_vel.linear.x = 0.0f;
-  cmd_vel.angular.z = -2.0f;
+  cmd_vel.angular.z = -1.0f;
   return;
 }
 
 static void left_forward(void) {
   cmd_vel.linear.x = 0.2f;
-  cmd_vel.angular.z = 2.0f;
+  cmd_vel.angular.z = 1.0f;
   return;
 }
 
 static void left_rotation(void) {
   cmd_vel.linear.x = 0.0f;
-  cmd_vel.angular.z = 2.0f;
+  cmd_vel.angular.z = 1.0f;
   return;
 }
 
@@ -216,9 +216,12 @@ int main(int argc, char ** argv)
     for (i = 0; i < 30; i++) {
       min_arr.data[i] = scan_data.ranges[i];
     }
+    static geometry_msgs::msg::Twist new_cmd_vel;
+    new_cmd_vel.linear.x = 0.2 * cmd_vel.linear.x;
+    new_cmd_vel.angular.z = cmd_vel.angular.z;
 
     vel_publisher->publish(cmd_vel);
-    real_publisher->publish(cmd_vel);
+    real_publisher->publish(new_cmd_vel);
     dis_publisher->publish(min_arr);
     rclcpp::spin_some(node);
     rate.sleep();

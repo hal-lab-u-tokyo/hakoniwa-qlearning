@@ -107,7 +107,9 @@ int main(int argc, char **argv) {
 
   auto node = rclcpp::Node::make_shared(buffer[0]);
   auto publisher =
-      node->create_publisher<geometry_msgs::msg::Twist>(buffer[1], 1);
+      node->create_publisher<geometry_msgs::msg::Twist>(buffer[1], 10);
+  auto real_publisher =
+      node->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
   auto subscriber = node->create_subscription<sensor_msgs::msg::LaserScan>(
       buffer[2], 1, scanCallback);
 
@@ -116,6 +118,7 @@ int main(int argc, char **argv) {
   while (rclcpp::ok()) {
     do_control();
     publisher->publish(cmd_vel);
+    real_publisher->publish(cmd_vel);
 
     rclcpp::spin_some(node);
     rate.sleep();

@@ -16,6 +16,7 @@ import os
 
 from . import qagent
 
+
 #print('abspath:     ', os.path.abspath(__file__))
 
 #TODO : 一旦はグローバル変数で宣言するが、ゆくゆくはパラメタで受け取る
@@ -28,6 +29,7 @@ last_state = "00"
 last_action = 0
 stopped = False
 stop_count = 0
+
 
 
 class StateSubscriber(Node):
