@@ -218,7 +218,7 @@ int main(int argc, char ** argv)
     }
     static geometry_msgs::msg::Twist new_cmd_vel;
     new_cmd_vel.linear.x = 0.2 * cmd_vel.linear.x;
-    new_cmd_vel.angular.z = cmd_vel.angular.z;
+    new_cmd_vel.angular.z = 0.3 *cmd_vel.angular.z;
 
     vel_publisher->publish(cmd_vel);
     real_publisher->publish(new_cmd_vel);
