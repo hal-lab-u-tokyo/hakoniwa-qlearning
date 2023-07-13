@@ -83,21 +83,21 @@ class ActionPublisher(Node):
 
         #collision -> add big minus fee
         if 1 in list(map(int, list(str(state)))):
-            q.add_fee(last_state, last_action, -1000)
+            q.add_fee(last_state, last_action, -100)
             best_action = 99
             stop_count += 1
             if stop_count > 6:
                 stopped = True
         else:
             # search & learn best action
-            q_best = 10.
-            best_action = 0
+            q_best = -1000.
+            best_action = 3
 
             for i in range(ACTION_NUM):
                 if q.select_q(state, i) > q_best:
                     best_action = i
                     q_best = q.select_q(state, i)
-            
+            print(q_best)
             q.learning(last_state, last_action, q_best)
 
             if np.random.rand() < self.EPSILON:
