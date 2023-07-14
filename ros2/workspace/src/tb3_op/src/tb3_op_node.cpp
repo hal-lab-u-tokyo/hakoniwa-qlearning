@@ -127,7 +127,7 @@ static void moveCallback(const std_msgs::msg::Int32::UniquePtr msg) {
   else if (msg->data == 99){
     tb3_stop();
     if (stopped == false){
-      printf("cllision occured:recovering...\n");
+      printf("collision occured:recovering...\n");
       RCLCPP_INFO(node->get_logger(), "end_time: '%d'", msg->data);
       time_list[1] = system_clock.now().seconds();
       printf("%lf", time_list[1] - time_list[0]);
