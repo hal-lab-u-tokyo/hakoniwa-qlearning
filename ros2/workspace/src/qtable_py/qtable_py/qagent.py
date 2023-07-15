@@ -45,7 +45,7 @@ class Qagent:
                     dis_ind_list[i]  = 2
                 elif dis_mean < 0.2:
                     dis_ind_list[i]  = 3
-                elif dis_mean < 0.5:
+                elif dis_mean < 0.3:
                     dis_ind_list[i]  = 4
                 else:
                     dis_ind_list[i]  = 5      
