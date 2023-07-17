@@ -199,7 +199,7 @@ Click the Start Simulation button in Unity and see the following startup screen.
 
 ![](https://camo.qiitausercontent.com/8aa80400f8a6b9527febde6edc5778187dc5f1cd/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3234343134372f64396265303530612d393662352d353032322d653230642d3964616332633166613430322e706e67)
 
-Clicking the "Start" button on the Unity starts the Hakoniwa simulation, and TurtleBot3 ~ begins to move ~.
+Clicking the "Start" button on the Unity starts the Hakoniwa simulation, and TurtleBot3 ~begins to move~.
 TurtleBot3 doesn't move until now. If you want to move TB3 and start learning, start q-learning program  with the following command.
 
 ### Operations on Terminal C
