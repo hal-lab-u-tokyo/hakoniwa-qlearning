@@ -164,7 +164,7 @@ I will illustrate the procedure with the following example.
 * ROS control program: `src/tb3/src/tb3ctrl.cpp`
 * Unity application: `TB3RoboModel`
 
-Execute docker containers in both terminals A and B.
+Execute docker containers in both terminals A , B, and C.
 
 If you have terminated the Docker container on terminal A, please start it again.
 
@@ -172,7 +172,7 @@ If you have terminated the Docker container on terminal A, please start it again
 bash docker/run.bash
 ```
 
-And, on terminal B,  you exec the following command.
+And, on terminal B and C,  you exec the following command.
 
 ```
 bash docker/attach.bash
@@ -199,11 +199,18 @@ Click the Start Simulation button in Unity and see the following startup screen.
 
 ![](https://camo.qiitausercontent.com/8aa80400f8a6b9527febde6edc5778187dc5f1cd/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3234343134372f64396265303530612d393662352d353032322d653230642d3964616332633166613430322e706e67)
 
-Clicking the "Start" button on the Unity starts the Hakoniwa simulation, and TurtleBot3 begins to move.
+Clicking the "Start" button on the Unity starts the Hakoniwa simulation, and TurtleBot3 ~ begins to move ~.
+TurtleBot3 doesn't move until now. If you want to move TB3 and start learning, start q-learning program  with the following command.
+
+### Operations on Terminal C
+
+```
+# bash run_learning.bash 
+```
 
 ### Running
 
-![動作例](https://camo.qiitausercontent.com/6aae22e5ac3d57f9faaf43c75d9eee84eb0d0dc8/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3234343134372f32316433333837622d336663652d303430322d623734362d3666353333353763643239612e676966)
+![動作例](https://drive.google.com/file/d/1d2N0QKgRC7jMjpCzeewNzdFVs6s_1pfI/view?usp=drive_link)
 
 Each window in this video corresponds to the following.
 
@@ -211,18 +218,13 @@ Each window in this video corresponds to the following.
 - Lower right: Terminal B
 - Left: Unity
 
-## Contributing
-
-Please let us know your comments and suggestions for improvement of the "Hakoniwa ROS Simulator" in the [GitHub Discussions](https://github.com/toppers/hakoniwa/discussions/categories/idea-request). We also welcome [Pull Requests](https://github.com/toppers/hakoniwa-ros2sim/pulls) for modification proposals.
-
-## TODO
-
-- [ ] Provide examples of how SLAM and Nav2 work ([#19](https://github.com/toppers/hakoniwa-ros2sim/issues/19))
-
-
 ## Acknowledgments
-* We thank Associate Professor Akio YOSHIOKA and undergraduate students Ryoji SUGISAKI and Akemi KIMURA of Takarazuka University school of media art in Tokyo for their cooperation in designing the Unity package for TurtleBot3
-* TurtleBot3 Unity assets are based on data provided by Robotiz, Inc. We deeply appreciate their cooperation.
+
+* This code mainly derives from https://github.com/toppers/hakoniwa-ros2sim. I really thank all participants of the original repository.
+* Quote Acknowledgements of the original repository below
+
+** We thank Associate Professor Akio YOSHIOKA and undergraduate students Ryoji SUGISAKI and Akemi KIMURA of Takarazuka University school of media art in Tokyo for their cooperation in designing the Unity package for TurtleBot3
+** TurtleBot3 Unity assets are based on data provided by Robotiz, Inc. We deeply appreciate their cooperation.
 
 ## Licenses
 
