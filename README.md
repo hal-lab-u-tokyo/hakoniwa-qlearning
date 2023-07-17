@@ -210,7 +210,7 @@ TurtleBot3 doesn't move until now. If you want to move TB3 and start learning, s
 
 ### Running
 
-![動作例](https://drive.google.com/file/d/1d2N0QKgRC7jMjpCzeewNzdFVs6s_1pfI/view?usp=drive_link)
+![動作例](https://drive.google.com/file/d/1d2N0QKgRC7jMjpCzeewNzdFVs6s_1pfI/view?usp=sharing)
 
 Each window in this video corresponds to the following.
 
